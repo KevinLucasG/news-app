@@ -27,45 +27,22 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
+              <div className="nav-link">Technology</div>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
+              <div className="nav-link">Business</div>
+            </li>
+            <li className="nav-item">
+              <div className="nav-link">Health</div>
+            </li>
+            <li className="nav-item">
+              <div className="nav-link">Science</div>
+            </li>
+            <li className="nav-item">
+              <div className="nav-link">Sports</div>
+            </li>
+            <li className="nav-item">
+              <div className="nav-link">Entertainment</div>
             </li>
           </ul>
           <form className="d-flex" role="search">
