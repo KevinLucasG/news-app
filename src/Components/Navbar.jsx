@@ -1,4 +1,4 @@
-const Navbar = () => {
+const Navbar = ({ setCategory }) => {
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-tertiary"
@@ -22,27 +22,40 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
+              <div
+                className="nav-link"
+                onClick={() => setCategory("technology")}
+              >
+                Technology
+              </div>
             </li>
             <li className="nav-item">
-              <div className="nav-link">Technology</div>
+              <div className="nav-link" onClick={() => setCategory("business")}>
+                Business
+              </div>
             </li>
             <li className="nav-item">
-              <div className="nav-link">Business</div>
+              <div className="nav-link" onClick={() => setCategory("health")}>
+                Health
+              </div>
             </li>
             <li className="nav-item">
-              <div className="nav-link">Health</div>
+              <div className="nav-link" onClick={() => setCategory("science")}>
+                Science
+              </div>
             </li>
             <li className="nav-item">
-              <div className="nav-link">Science</div>
+              <div className="nav-link" onClick={() => setCategory("sports")}>
+                Sports
+              </div>
             </li>
             <li className="nav-item">
-              <div className="nav-link">Sports</div>
-            </li>
-            <li className="nav-item">
-              <div className="nav-link">Entertainment</div>
+              <div
+                className="nav-link"
+                onClick={() => setCategory("entertainment")}
+              >
+                Entertainment
+              </div>
             </li>
           </ul>
           <form className="d-flex" role="search">
