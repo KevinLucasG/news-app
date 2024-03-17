@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import NewsContent from "./NewsContent";
 
-const NewsBoard = () => {
+const NewsBoard = ({ category }) => {
+  // Destructure category from props
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${
+        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${
           import.meta.env.VITE_API_KEY
         }`;
+
+        console.log(url);
         const response = await fetch(url);
 
         if (!response.ok) {
@@ -24,7 +27,7 @@ const NewsBoard = () => {
     };
 
     fetchNews();
-  }, []);
+  }, [category]);
 
   return (
     <div>
