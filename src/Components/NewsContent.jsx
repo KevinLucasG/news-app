@@ -1,5 +1,4 @@
-import React from "react";
-
+import image from "../assets/news.jpg";
 const NewsContent = ({ title, description, src, url }) => {
   return (
     <div
@@ -7,7 +6,7 @@ const NewsContent = ({ title, description, src, url }) => {
       style={{ maxWidth: "345px" }}
     >
       <img
-        src={src}
+        src={src ? src : image}
         style={{ height: "200px", maxwidth: "360px" }}
         className="card-img-top"
         alt="Card image"
